@@ -3,12 +3,12 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/paascloud/paascloud-config-repo.git
-          username:
-          password:
+          uri: https://github.com/tangtonglong/paascloud-config-repo
+          username: 532697721@qq.com
+          password: ubuntu12.10
           search-paths: /*
           default-label: ${spring.profiles.active}
-          basedir: /data/config/paascloud-config-repo
+          basedir: /Users/tangtonglong/docker_config/paascloud/config/paascloud-config-repo
     inetutils:
       ignoredInterfaces:
         - docker0
@@ -26,6 +26,6 @@ encrypt:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://root:root@paascloud-eureka:8761/eureka/
+      defaultZone: http://root:root@localhost:8761/eureka/
   instance:
     instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
